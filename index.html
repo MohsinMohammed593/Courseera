@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Menu</title>
-    <link rel="stylesheet" href="module2-solution/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -26,3 +26,108 @@
     </main>
 </body>
 </html>
+3. Ensure Correct styles.css
+Make sure the styles.css file is inside the css folder and matches this code:
+css
+Copy code
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Section Styles */
+.section {
+    border: 1px solid black;
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f5a9a9; /* Default color */
+    color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+#chicken .section-title {
+    background-color: #f5a9a9; /* Light red */
+}
+
+#beef .section-title {
+    background-color: #d9534f; /* Red */
+}
+
+#sushi .section-title {
+    background-color: #ffd700; /* Yellow */
+}
+
+.section p {
+    margin-top: 40px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Layout for Desktop */
+@media (min-width: 992px) {
+    main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section {
+        flex: 1;
+        margin: 0 10px;
+    }
+}
+
+/* Layout for Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .section {
+        flex: 1 1 45%; /* Two sections per row */
+        margin: 10px;
+    }
+
+    #sushi {
+        flex: 1 1 100%; /* Full width */
+    }
+}
+
+/* Layout for Mobile */
+@media (max-width: 767px) {
+    main {
+        display: block;
+    }
+
+    .section {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
