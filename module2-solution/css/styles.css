@@ -51,24 +51,3 @@ header h1 {
   }
 }
 
-/* Tablet - 768px to 991px */
-@media (max-width: 991px) and (min-width: 768px) {
-  .section {
-    width: 48%; /* First two sections side by side */
-    float: left;
-    margin-right: 4%;
-  }
-
-  .section:last-child {
-    width: 100%; /* Third section takes up full width */
-    margin-right: 0;
-  }
-}
-
-/* Mobile - 767px and below */
-@media (max-width: 767px) {
-  .section {
-    width: 100%; /* Each section takes up the full width */
-    margin-right: 0;
-  }
-}
