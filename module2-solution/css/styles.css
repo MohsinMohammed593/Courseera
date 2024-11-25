@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #f9f9f9; /* Optional light background */
+    background-color: #f9f9f9;
 }
 
 header h1 {
@@ -18,78 +18,70 @@ header h1 {
     color: #333;
 }
 
-/* Section Styles */
-.section {
-    border: 1px solid black;
-    background-color: #e0e0e0; /* Light gray background for sections */
-    padding: 20px;
-    margin: 10px;
-    position: relative;
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
+.section {
+    border: 1px solid black;
+    background-color: #e0e0e0;
+    padding: 20px;
+    position: relative;
+    flex: 1;
+    margin: 10px;
+    min-width: 300px; /* Ensures sections align well on tablet */
+}
+
+/* Section Titles */
 .section-title {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #f5a9a9; /* Example title background for Chicken */
-    color: black;
+    background-color: #f5a9a9; /* Change this per section */
     padding: 5px 10px;
-    font-weight: bold;
     border: 1px solid black;
+    font-weight: bold;
 }
 
-/* Custom Colors for Titles */
 #chicken .section-title {
-    background-color: #f5a9a9; /* Light Red */
+    background-color: #f5a9a9; /* Light red */
 }
 
 #beef .section-title {
-    background-color: #d9534f; /* Darker Red */
+    background-color: #d9534f; /* Darker red */
 }
 
 #sushi .section-title {
     background-color: #ffd700; /* Yellow */
 }
 
-/* Text Styling */
 .section p {
-    margin-top: 30px; /* Ensures text doesn't overlap title */
-    font-size: 1rem;
+    margin-top: 30px;
     line-height: 1.5;
     color: #333;
 }
 
-/* Layout for Desktop */
+/* Responsive Layouts */
 @media (min-width: 992px) {
-    main {
-        display: flex;
-        justify-content: space-between; /* Equal space between sections */
-    }
     .section {
-        flex: 1;
-        margin: 0 10px; /* Horizontal spacing */
+        flex: 1 1 30%; /* 3 sections side by side */
     }
 }
 
-/* Layout for Tablet */
 @media (min-width: 768px) and (max-width: 991px) {
-    main {
-        display: flex;
-        flex-wrap: wrap;
-    }
     .section {
-        flex: 1 1 45%; /* Two sections per row */
-        margin: 10px;
+        flex: 1 1 45%; /* 2 sections per row */
     }
     #sushi {
         flex: 1 1 100%; /* Full width for Sushi */
     }
 }
 
-/* Layout for Mobile */
 @media (max-width: 767px) {
     .section {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Full width for all sections */
         margin: 10px 0;
     }
 }
