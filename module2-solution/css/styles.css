@@ -1,1 +1,74 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Section Styles */
+.section {
+  background-color: #f4f4f4;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.section .title {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  background-color: #d3d3d3;
+  padding: 5px 10px;
+  border: 1px solid black;
+}
+
+/* Responsive Layouts */
+
+/* Desktop - 992px and above */
+@media (min-width: 992px) {
+  .section {
+    width: 32%; /* Each section takes 1/3 of the width */
+    float: left;
+    margin-right: 2%; /* Add space between sections */
+  }
+
+  .section:last-child {
+    margin-right: 0;
+  }
+}
+
+/* Tablet - 768px to 991px */
+@media (max-width: 991px) and (min-width: 768px) {
+  .section {
+    width: 48%; /* First two sections side by side */
+    float: left;
+    margin-right: 4%;
+  }
+
+  .section:last-child {
+    width: 100%; /* Third section takes up full width */
+    margin-right: 0;
+  }
+}
+
+/* Mobile - 767px and below */
+@media (max-width: 767px) {
+  .section {
+    width: 100%; /* Each section takes up the full width */
+    margin-right: 0;
+  }
+}
